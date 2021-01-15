@@ -140,24 +140,54 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
-#keys-container-grid button span {
-    background: -webkit-linear-gradient(272.21deg, rgba(52, 247, 206, 0.2997) -46.53%,#34B7F7 178.67%);
-    -webkit-background-clip: text;
-    text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.4);
-    color: transparent;
+#keys-container-grid button {
+    text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.2);
+    color:rgba(73, 73, 73, 0.808);
     font-size: 4.375rem;
     font-weight: 300;
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
-#result-sign {
-  font-size: 6.875rem !important;
+
+#keys-container-grid button:active {
+  box-shadow: 3px 2px 6px 1px rgba(0, 0, 0, 0.25);
+  transform: translateY(3px);
+}
+
+#clear {
+  font-size: 2.375rem !important;
 }
 
 #result {
   grid-column-start: 3;
-  grid-column-end: 5;
+  grid-column-end: 6;
+  font-size: 6.875rem !important;
 }
+
+#result-screen {
+  grid-column-start: 2;
+  grid-column-end: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#result-screen input {
+  background: -webkit-linear-gradient(272.21deg, rgba(52, 247, 206, 0.2997) -46.53%,#34B7F7 178.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  font-size: 4.375rem;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  border: none;
+  max-width: 50vw;
+}
+
+/* ajeitar a sombra interna do BAUER */
